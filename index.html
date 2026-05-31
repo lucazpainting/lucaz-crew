@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LUCAZ Crew">
+<meta name="theme-color" content="#18181B">
+<link rel="apple-touch-icon" href="data:image/png;base64,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s9Q0SkpK/AuUzzv7UR8JaN7jTU1NbNiwwfeqXjawrq6O0aNHYxgGmUwGy7IYNmyYH3x6x/Box4HHVhSF3bt3s2rVKt8727ZNOBzukub2Psfq1at5++23j9nN/k5muHskCiGOWOZbSKwcpVdMp9Pouo6maV281NEsvYfq76upqWH16tUoioJhGOzZs4dh7r7TR7qpamtraW1tZciQIf5glU2bNpFIJHjqqad4+umnuxThd1YlgsEgGzZsIJvNEgqF/Od5/77++utks1ni8ThSSjKZDGeccQa9e/f2Qe9RkwULFvif98NIZAQCgRO6CEo5WTyzlJL29nZ++MMfkkwmfd3WW5Zt2yadTh/xOF7thZc5AxgwYEAXMG3btu2oPlNdXd1BEt/y5cspKyujb9++dO/enR49etC9e3cGDBjgrwRSSgKBAI2NjdTV1XX5foqi0NrayuLFi30qdLg0tyc17tixw28yeK92tH2MXoWkl4g6Ej07XqA/KTy0ZVlomsaLL75Ic3OzX+tQVVXF2rVrfY/V2Nh4xIuxc+dOv5nAA8agQYMoLi72vejmzZsxDOOw/M/Th9esWeN3imiahmmarFy5kksvvZTzzjvvkJz4T3/6k//ZLcti1apVjBw5sot3nTNnDslkskuae8iQIQwdOrSLd1YUhQ0bNrBz586DGhrerbM4muDN4+rV1dUEg0FyuRzNzc2HXcE2bNhAv379upQAfKQ9tJTyIFnH8zqex/J2stI0jbfffpvnn3+e6upqH2ydvauiKGzevPmwF9aTy2pqarp4xdLSUoYNG0YmkyEUCrF7927q6ur89z+UArFmzRp27drVpYho69atpNNpTjnllC6e1Pv31FNP7dJDGQwGWbdunS/pKYpCJpNh3rx5XVYeKSWTJ0/2b8LOn+m5555DVdX3DBrv+6xatYpsNttl5TrUCtnc3MzOnTvp3r07pmlSX19/0Pn2ruGqVauOi5c+rvXQe/bs8S+UF8l7qVfvIquqypIlS3jggQecrX6LivxU7IgRIygpKfE7PGpra/2gzqsl9gK+7du3s3btWsaNG3cQp542bZov34FTqnkgL++cqXv66aedAYRu54jnWWtqag5qyfKOU15eTs+ePX21Q9d19uzZw5YtW/znLliwgIaGhi5p7p49ezJ69Gj/fbxKuGeeeYa1a9cSj8ePODfwULKgbdv+eWltbeWvf/3rQcc4sJxUURSeeOIJGhoaGD7c2Upj27ZtPo3r3NWze/dudu/e3eWcfmQB7XnTXbt2sX79ep8rRiIR1qxZw9KlS335bOPGjTz00EP8+te/9rtUPDnMa5U699xz6ejoQNd12tvbeeqpp/znCiHQNI10Os3999/PwIEDu9RAeDfTwIEDmTp1KslkkqKiIpYtW8bixYv9Y8D+ssg//OEP1NfXo+u6D7C3336bhQsXkk6nyefzB+nL3jFSqdRBwHn++ed9oM2aNcsvGvI83fTp0wmFQv7779mzh0ceeYRnn32WaDTq92IeyXG0t7f7vNf73p3PixfsJZPJLuWu3vNUVWX27NnMnTuXnj17Mm7cOKLRKPv27WPFihU+DfPe7+WXXz5qPf+k5tCdl+xf/OIXWJZ1UGnjL37xC8rLy7Ftm9bWVizL8rtJOjo6usy3kFJy4YUXUl9fz+LFi4lGo7z11lsEAgHOO+88wuEwW7du5S9/+QuZTIbPf/7zfnr2wJvsqquuorm5mSVLlhAKhXjsscfIZDKcfvrpfsfIP//5T5YsWYKmac5egZEIjz/+uJ/Ra2xs5Pvf/z6f/vSn/Yo6zx555BF27NhBKBTyU8y6rrNy5Uruv/9+zjzzTJ/je38PBALMnTuXFStWYNs2bW1t7N69m3Q6TSwWI5/PE4vFDsn3PWoyd+5c9uzZQzgcpr6+npdffpmBAweydetW3njjDbZs2cKZZ55Ja2srb731ln89XnzxRTRN82nQ4sWLCYfDqKpKjx49mDp1Ks899xxPPvkk/fv3p6qqCoDZs2fz8ssvc+65535oystxDQq9Zbu6upqioqKu2xx3+ruXieocBOXzeb+4xqMdgUCAO+64g+rqaubNm0c+n+f555/n9ddfR9d1vxv8xhtvPGRtr+eRdF33gfjmm2+SSqV48MEHqaioQNM0WlpaMAyD6upqRo0axQUXXEB5eTnLli0jGo36oNq5cycNDQ1d5oLYtk19fT3xePygZTgcDrNt2zaGDx9OSUnJQedr586dXehGOBwmFov5XjQej/tBXWed26MTzz77LMXFxf5q9Oyzz/pBbCQSobq6mu7du/P666+zb98+vxJv27Zt/PKXv/TPV7W7PZ733l4B0muvvcY3v/lNhg0bRiKRYNu2bYwbN45p06YdF7XjuE1OOpJu/G7qDzoDtLGxkQ0bNtDc3IxhGBQVFTFw4EAGDBjwjt6i89927drFqlWr2LFjB62trX4hzoABAxg2bFiXwDLlzsPu/Fmj0ehBNKCtra3L87rwPkUhFAqRTqcPSqcf2BFyqD7MkpKSQ34v27ZJJpNdXuMBu/NQ9WAwiG3bXYL0zjFA5zgnGo12oU07d+5k3bp1NDU1EYvFGDZsGAMHDjxust1HZhTYOy1tR7v0Hc3zCgMYeVcOogDoY+z1323HROey0gOLgA6snTjS2IQjqQ2Hes17vRRH0/t3LCnjO51z5ThuPVKYPlqwj5QphVNQsAKgC1awE9ROqmo725b+JkRepN65sOdQXLdz13HndPR+ziq6HFMoirPBfKdjHFgQ5G+BdoiOZn/rNult93boYPJQn+tQfL3z9zxQ/eiamnf2COw8jP1QDQiH4sLO8fbvkHXgdz6ZrMChj6GS8kG99jh/aU6mrcy0DxoAXe4e7/FOv8vD/K2zpxBC0NzUxBNP/JVkawIpba648mqGDh/B9u3bWbxwPtdcez0AK1eu4OmnnuTSS69gz55dNDY0cMutt2GaJv/7858yZMhgGhqa2L1zJyWlJezd18DQoUPp168fr732CpddfiU763ewbesWPv3/PoseDPLoI7+juqobF11yOSuWL+fvTzxOeyrFNR+7lnMmT+niTZ9+6kneXrOGadNnMvGss7p4zB3bt/GHP/yetrYk06ZNY8bMCwF46aUXURXBjJkXYFsWT/7jCbZt3UoqmeTsSZOYef5FvPbKyyxcuIC2tjbOv+B8xk84i4d++2sQgpbmZsaMGc348RP5y5//yHXX30iv3n158cV/sm3bVqq7VbP27bWUl5fR1NRMv379GDRoMHPmzKYj3cHAAQO59robeOrJJ7Bti49ddwPPPv00mzfW8oUvfZlorMj5juzfk1Ae5noeRhr5aHBo70L6Upf70/n3w/3twIEr8XicFctXUFZeRklZBT/84XeRUrJkyRIee/RhMmlv64cYS5Ysplu3Sioqq7j//l/yr9df8WsVTNNm7769xOJFvPrqKwwePJh9+/ZiS8mC+fPp17cfuh7kkUce4R9P/s3PuOVyORKJBN/65t2MGDGCSedO5cEHf+Vvegkwa9a/WLpkMWdPmsybb87qclN3dHTw/e/dR3E8zpRzz+OJx/9CPu8U9rzy8kv8641XnQuiquzYXk9TUxOTzj2Pn//sZ2yp24hp27y9bh3TZpzPo488worlS5k/fz4CyahRp9C4r4GS0jLmznuL3/3utwgBpmmTSWfIZbOUlZazYMF8anr0oHFfA4lEgjVrVjNlylT+8Y9/sGzJIlLtaWbP+hfBYIjde/aCGiAS7dSQe8B14zDX8KCfj4qHNtPt2KYFirMp+n7u6e5sqjibtksJiuh0t7vb+6rBEMLNSimqilAURo4cxYhRY3j9tVcwTYOd9fVYtk3d5jpGjRpNNBqhuqqa0tJS2ts7KIqX8qc//ZHJU6bSr29/otEoX/7yXdTVbeatt+ZxyaWXENACrFu3nu7du1NWXk4kGmPQoEE8//w/mT5jJlVV1cTjcV5//TV69erJjTd9AtM0GTx4UJcVZefOnWhagEGDBhGJdt2H5bnnnsW2JZ//zy+61XdlCKHQ0dFBMpkgYZs0Ne6jorKKUChEv379mD59Bo898jDNLc2UlJQSL4oxc+ZMZs96ne3btlIcL2bKlHMZM/Y0du2sR1UUSktLWbBgPrXr36Zv3z7s2VXP1ddeSzLZxsJFC7jggguoqurOrFn/IhaNMm3adF577RVqa2u57PLLefaZf1C3aQOJ1mZuu/0OB6juTWnl89j5rLPrLM41k7bEFvhbJEsA4WQ3vT3ECegnMaBdzpXNZPju+RfQsnEj4UgEISXS355Xksc7CaB23rLXfX0q1c7n//xHRk2bge22OKmqQlNTI4sXLyQWDZNqS2HkMgwYOIhlS5cwatRoTNMik8k6rUvZLDNmzGT16hU8+ffHCYVD7jCUMLl8DtMwMPIG5eWV/h4mUkryuRzTp89k6bIlPPLIw/Tr159cLsfCBfM5xd1dIJ/LcsopY7oEZqeeeip//csfOWPceC659DKy2QzBoNPVsmbNaqq7dwcgn88zfrwzdH3p0mUMGTKMfXt3sXLFCqbNOB+Q7Nu7l9ra9XR0pKis6Eb9rt2YhkFTYyPbt23jrDPPQigKv3/sMebNncvtn/4M7e3t9Ovbh6pu3fjVA/fz8Zs+4dZLB7FME9M0aGtro1evPgghSCQSzH9rLrvqdzJz+ky6d+/O6DFjufvrX2PKlKn07NUb27Idx4Pkh5+4mV2zZ6NHImDZCFVBUxQMywYkqgCpeNs8K5h5g0hlBfe89hqh4pIPJY7QPgCegWVZtKfaGH3LLWQSCQJu8YzVqYtZ2jY2blmmlEiE44WlBFVB0wJUDXV65bxN70PBMH/5y1+JxaL8x+fuZNu2bRSXlDA0EmXhgre45ZO3AU5dtVdfXVVVyUUXX8oTT/ydM84YR/eaM52oXiiYpuUrCN6MDiEEuXyO8spKLrzoEh7+3W9pbmpi+vQZJJNJdM0pLvrdQw+xZcsm7r7nXioqnBl3c2b9i3zWYPHiRQwaNIgtmzdx4cWXOauSZSE01W/B8rpiFi9eRDwWw6ysYunSxUybcT7BUIjVa9ay/p67ufyKq+jbfwDb3LqSr331LkaMGs2EM8/mz3/+M7FYlLa2lM9ks9kMt3/6M3zlrv/itddepm/f/iAlejCI2klV0XWd9nSae++9h/ETzmTqtOkgJeMnTGTFihVcefU1+4mxEOTSHYy98kp6uUNuPEVIeITalljSmQ8oOl3riopKAqHwh6aYaB8Md1YIBAJMvvgipC2RSIQiEGK/JNbZoXubo/vT+TWNaCxGQAt0CQ6z2SzTzpvGzbfeih7Qefwvf2bhwvkIodHc3EBrazPBoNOMarsF5+3t7dx+w8d57dVXWbBgPpOmnOu8h+vxfRntgJFXRj7HhZdfyUsvvsDyZcu54IKLqKmpYeOmjSiKwoCBA1m0aAHl5U4/3+rVq1i5Yjm/+vWv+cY99/DAA//H5z/3Bf+Y3WtqeHvNKv87WpaFYRjU76ynfvt2SktLMXIOp87nDCZPmkxHJkOqrQ0AI28QjcX4/g9+REVlN6ciUVW54caPc8YZTtNCW1uKjo40/fv347wZM3niL3/i9k9/2ue5li19OpfJZOnbpw9nnT2Jvz3+Vxob9lHZrYrysnLKyysOmvEnhMLpk85BKCqKqjgOybb9zemlu3G9s+o6XloPhoiEIx8qh/5AgkJFEcSK4sSiRcSKiojF4hRF48QiMeexmPNYLFZEUayIeCxOUayIWDRGNBojEo4gJD53806UqiqEwkH0gI5l2ezcVc/d3/gm9377PrSAztrVK4lEopiWhQC39y1LJBLh0ssuZ/eevSjuBdKDepfgU1VVTCPvKbrYltN0cNHFl5JIJlFVhdNOO4MFCxbSlmzFlpJUW5tPldraUjS1tDBk6DAmT57M8mXLsNl/804YP5Ha2g0sWvgWpmHw2KOPUF+/A13TuP+BB/nil75MQ2Mj+/bsIqDraAGNc8+dyj//+RzpjnaisRi2bVFR2c3XsDVVZdvWLWSzGZ584q9k0h1IJJZlceUVVxKJRkm7+yQ6VCfne05NU8nnclx00UXk83n+8Mffu0F1lFw2g6SrQqWHQhTFi51rF405164oTlEsTjTqPhYtIhYtIhKJEglHCWga9gHlwSetyqFqGqFIhEg0RjQWIxyN+j+RaIyI96/7t1Ak4vyEw+jBIFogAJ5sh2DP7t20p9rYsH49UkrWrV/HqhUrKCoqoqKyklA4wssvv8L6dWvJ5/OsW/c227ZtpbGxkVw2y8UXX8ykc86ho6MdgO3bd9DWlmL58qUAJBKtNLe0snbNajZsqKVu0yZs22Lq1KlMmjSZpqYmZp5/PqefMY6bb/o4jzz8MBPOPNNPkowZM4a+fftzw3UfY2f9diafex7/+78/d25HKRl1yilcfMnlfP1rX+eO22/Fsgw2121mx44dlBQ7bVR5w+Spp56iuamRFcuXM3TIUPr1H8D99/8fyWSCPXv2smrlCr+lLJPJ8vwLL/D5z36GBQvm05pIULdlGzvr66mpqeH8Cy8mm3M6RzZu3EgikWT9OmeGR92mOpLJJKoi+OStt/HiCy+ys34H69avoy2VYsP6rvP3FCEIhb3rEyIYChMMRQiGQs5POOxfu2AohB4MEgjoTlBYSKwcbK2trTQ1NhLQA/Ts2Yumpkba2zvo0aMHuVyO7du3Ew6HCYfDdHR0UF5eTjKRwLZt+g8YgG3bJBIJIpEI0WiU3bt3kU6nKS0to7y8nL1795JMJqmoqKCtLUkgoFNTU4NpmnR0tKMoKqFQiFwuR92mTYTCIUaMGLlf0TFNWlpaqKvbRO/evSktLSOTyfgjBvL5PJlMhrq6TUhbMmbsGHbv3k02m6NXr14kk0kaGxv8ThQhFKqqqkinO8jnDQIBjXQ6Q2VFBcUlJbS2trJv3z4CgQDZbJbq6ioURaW5uZkePXqg6wF3VLDTttba2kpLSwvFxcWUlZX56lB1dTWGYZBIJCgrK6O5uQnLsqioqCAeLz7p8kAnVaawc69d5+J3byxu52EuXmrYK0b3Gma9zpKj2QjT49Ne0GhZFvl83u2zU7Dt/SMApJT+Dlad/7/zZ3eagAWBgI5pWgjhlloKgXXAQEfv/bxB7F67WhdZ1G0Y8HofD1QROr/mcFP4vZutc2ua+iF71X/r1PfRFuB3ros42ui6y3PfY8r3aBoNjibiP9RxPqz0+cm8RVyhlqNgHykrlI8WrADoghWsAOiCFawA6IIVrADoghUAXbCCFQBdsIIVAF2wghUAXbCCFQBdsAKgC1awAqALVrACoAtWsAKgC1awAqALVgB0wQpWAHTBClYAdMEKVgB0wQpWAHTBCoAuWMEKgC5YwQqALljBCoAuWMEKgC5YAdAFK1gB0AUrWAHQBStYAdAFK1gB0AUrALpgBSsAumAFKwC6YAUrALpgBSsAumAFQBesYAVAF6xgBUAXrGAFQBesAOiCFawA6IIVrADoghWsAOiCFawA6IL9u9r/B9/bnELXNT+oAAAAAElFTkSuQmCC">
+<title>LUCAZ Crew Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:#18181B}
+body{font-family:"Sora",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#18181B}
+input,select,button{font-family:"Sora",-apple-system,sans-serif}
+button{-webkit-tap-highlight-color:transparent;cursor:pointer}
+::-webkit-scrollbar{display:none}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pp{0%{transform:scale(.94)}60%{transform:scale(1.03)}100%{transform:scale(1)}}
+.fi{animation:fi .2s ease both}
+.pp{animation:pp .18s ease both}
+.dt{
+  width:38px;height:38px;border-radius:10px;
+  border:2px solid #E4DDD5;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .15s;
+  flex-shrink:0;position:relative;background:#fff;
+  -webkit-tap-highlight-color:transparent;
+}
+.dt:active{transform:scale(.88)}
+.dt.on{
+  background:linear-gradient(135deg,#8B1A1A,#A52222);
+  border-color:transparent;
+  box-shadow:0 4px 14px rgba(139,26,26,.25);
+}
+.dt.td{border-color:#F59E0B}
+.dt.on.td{border-color:transparent}
+.dt.half{background:linear-gradient(135deg,#A06010,#B45309)!important;border-color:transparent!important;box-shadow:0 4px 14px rgba(160,96,16,.25)!important;}
+.nb{
+  width:100%;display:flex;align-items:center;
+  border:none;border-radius:10px;cursor:pointer;
+  transition:background .14s;white-space:nowrap;overflow:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+.nb.no{background:#8B1A1A!important;color:#fff!important}
+.tg{-webkit-tap-highlight-color:transparent}
+.tg:active{background:rgba(255,255,255,.12)!important}
+.cc{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cc:active:not(.cb){opacity:.75}
+.rp{-webkit-tap-highlight-color:transparent}
+.rp:active{opacity:.8;transform:scale(.97)}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useCallback}=React;
+
+const LOGO="data:image/webp;base64,UklGRrIHAABXRUJQVlA4IKYHAACwJQCdASqgAHgAPsFYpE4npSMiKhKamPAYCWMA11ocPg5HW3wA+z36INux5gPPP9GXnAdQ7vMeApf4ftK8AfLP8Akjkv+Hn+v8PeAF693WMAHdldgPRHSNfOOhCz7/WfsIdJE1SIrFmyUXXKAPYuS05OD424cFtOuom8GJ6+Fs0n+Qj1jWltxahsszAFO5BlX69hyfo+5igSLm/oc77TNVRfC9w6logiQnGOKR3rujitPWJRe+66ODs8iEm1IBPDlWT8LxSZnDInTvWvHtMdLPFjn3OAxau2e9/4oDGX1Zt+acMBMPHWyJhEcPCs5JTE/hHQxpXXDz6alrp/v8p98pgolNDLMsfFsfAs5hAfUVaYwO0an1KzxWVZRJmwj/LJTJhD7+qrTk0UiTdnt9lWkxFYs4prjAAP74TQAUSDmDSPhbnUd8Tgdb3JydZZoL5vX9NFXfIMfV2aUXl6UxZimb+bqs4AzZsqe0205iurmMq1oraadktlCn1ApLlsDU2uE6QzWsSLRpf0bxSnS61jnP7uys/aLAeFFfpb3x68z0ybl7fwoBp1BnhojCLl/qb9FeIixfJgxSHI2U0vLPDGC/MsFIpoxI3B/6GETVwxtlp/LeLbereHeDYWtqCJn+U4VI0JlndyFNBLP8LYmwbYnTPvyYHInNISMhD2aG3jyDoeq9NVmePxlEqmXz6Eb452w/0ob4qpv51oD+T/27niYWPHmBKXbsIA1d4St8FxuAUkjcSu58OmcEV0Gd7W+ZKjjAixvuu8CJ/XLNjHFeRLNCI+wYHz4Blryv//XZcjMpH49znieOFZNN+ekC7TW59GCfSck6X2Y66H8F+Ky5LAkqZDclP/MeQxlDiCp7tD0ps8jwdKqQwCxtOE4zYQq7kZreDXM3lR410H/04wBBY0CQkVuHshyRlry3p1Z15xoO2Azcml6S+4IStOh2wDKolUvaLq1lv41+O9vl/3E8KjTHeMff6i/9QA6NqTkahkALkBZ1lneBVVdsf7VrzYeQKG9GG232nWd2RIrM9zSs1d21krdARfsn7eFZ28TIwNcb6AAKZCBQ38/QsIguI4aMdt7A4ZWol0j4zLQ5yMuAzZxs90KBMiFYZ26QROUepfkwua8spxpkYdilRCSaNFkXptzotBVBbiZ0s9YIqf0H5YsbPbObsU0MF5jnrvHmtKiELuMc+t51YNbQg7QzXscf9WPJ8P/6RmvSWtSirvQornA155DoYbsxDQhhyCtI/pfHQrt93fq/d0qh/1gk0xeKSs2LqozHmflAtEaR5+IgSmYCbgi8uT2pN1wdoAMo71JSg9GvhZJMH8h9MS/mNqg16QzRKO1ySs5T+fw1IYwedjBHYu1OebpvRyz2VVpA/d4lQ512iT3vL580DQEk25VEUyPrVrhfUyatpEl6TllHZ67k7qgG8mtOjyx/lzmtQiKzNjytdT9O1l/Teyv39PzWD47P7znJpgSYQBTksG8A7Fp4jPlM1GsFKvnJVPzq8w3pbeDemeQdtGCbb2ZoykehTUMZCy4mXIE/XFpfkgq16D/+k1Ng1PEO4wlWWi4OJhBgcxQGQ53V3LQ9kEtEE5XocclvI+bps5z0zEnSfUoLAEtdSD718q5EcXlCJEzAQT1CCus2w710SzeVOwjL6VzAZAse5R2n0u0i264PP30LZ6tZxFm43i9wuY5QUY5t6+zTgbVXUpohlnTPzqz8ZOUHBZVJJDPWKGHLzVQ1zkJQ9Hjtw+MoK5q43yPxj6rKBb95mqp77PremHt8GBgsFKKBP6SPOJOQ9DiNDnkf2utjPLe3zGmNL5M/NEsmyXCmUXkCcrp+LakTmKQwFQCxCy2AIfmV0qkuEnvZN9NccYh3vZKWbwH/usG2DxAAoEyGjRLxj5jKMFE64uJ8qw1PkmGlnerSvIrHwZ0XJLOau/6eyICNbSeMvj48PDj+pZnjnkK0RcsSJfNMlqVYiEAbJgPGKwM7aJw0ZfJs5goMXdn60WY1ZPF25iD9LBuV6W/S3Z9jj5xW+kjLqJG+nm9v7EXt0SUGZlh0Vx5MGHGPwxYCzN1LJt/uDoCBN+dlJ56QHKJZBsndDTRYhsDMbV3vE88EgxradUqhXBkA5KYdNZ0iNdPkzcYwBuQusflEUpKwnns40PsS4acsyQ7woOa60gHja1MQbCjnU0w67Joyjl54ohYGAL4LgZKA5z2/ykNbtw5n/tL3OUpvwtqhQqE+fahlKEa6O2lU+Hb8aJtODlXK7IhG+Q6IB99ZAeGsmcZtx/SB1H2oDous3SuL/LVfOGd8+93bXeOnFd+xjxltu4iB/PIr9Fxb02DMw8SQCzpwy+OAdWPJmVmVH429f/axYDv+gntgmccjB/cHKiobyG4UDDBXbtK9pRNTXhbFuzCmjy9A5A5l7LZsH0ZDXnonEXpfUOzSoGASvIlwC/8jLnBync0jLkSPTFUwj6KbKAeMcspD8lcbw7kZoUhhEvf+bLyD9Qi9cLOXj3yLiyo21fF5+kWUoLbZuGIZDIixRD+lu53Yrzu3cCT9g8i7+rtCcXoAwiJkEzbHZf8qZs30vJEpelihX4Em9fupCXdIs9P0U/pNOQAAAAAAAA==";
+
+/* date helpers */
+const pad=n=>String(n).padStart(2,"0");
+const toISO=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const todayISO=()=>toISO(new Date());
+const parseISO=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+function weekMon(off=0){
+  const d=new Date(),day=d.getDay();
+  d.setDate(d.getDate()-(day===0?6:day-1)+off*7);d.setHours(0,0,0,0);return d;
+}
+const addDays=(d,n)=>{const r=new Date(d);r.setDate(r.getDate()+n);return r};
+const MONS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MFULL=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const WDAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const CDAYS=["S","M","T","W","T","F","S"];
+function fmtWk(mon){
+  const sun=addDays(mon,6);
+  return mon.getMonth()===sun.getMonth()
+    ?`${MONS[mon.getMonth()]} ${mon.getDate()}–${sun.getDate()}, ${sun.getFullYear()}`
+    :`${MONS[mon.getMonth()]} ${mon.getDate()} – ${MONS[sun.getMonth()]} ${sun.getDate()}, ${sun.getFullYear()}`;
+}
+const f$=n=>"$"+Number(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",");
+const fD=iso=>{const[,m,d]=iso.split("-");return`${MONS[+m-1]} ${+d}`};
+
+/* colors */
+const R="#8B1A1A",R2="#A52222",RG="rgba(139,26,26,.2)";
+const DK="#18181B",DK2="#27272A",DK3="#3F3F46";
+const BG="#F7F5F2",BG2="#EEE9E2",WH="#FFFFFF",BD="#E4DDD5";
+const GR="#71717A",GR2="#A1A1AA";
+const GN="#166534",GN2="#DCFCE7",GNB="#22C55E";
+const AM="#92400E",AM2="#FEF3C7",AMB="#F59E0B";
+
+/* icons */
+function Ic({n,sz=16,c="currentColor",sw=1.8}){
+  const P={
+    cal:["M8 2v3M16 2v3M3.5 9.5h17M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"],
+    usr:["M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2","M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8","M22 21v-2a4 4 0 0 0-3-3.87","M16 3.13a4 4 0 0 1 0 7.75"],
+    clp:["M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2","M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z","M9 12h6M9 16h4"],
+    bld:["M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18","M2 22h20","M10 6h4M10 10h4M10 14h4M10 18h4"],
+    dlr:["M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"],
+    pls:["M12 5v14M5 12h14"],
+    chL:["M15 18l-6-6 6-6"],chR:["M9 18l6-6-6-6"],
+    chk:["M20 6L9 17l-5-5"],
+    x:["M18 6L6 18M6 6l12 12"],
+    inf:["M12 16v-4M12 8h.01M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0"],
+  };
+  return React.createElement("svg",{width:sz,height:sz,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:sw,strokeLinecap:"round",strokeLinejoin:"round"},
+    (P[n]||[]).map((p,i)=>React.createElement("path",{key:i,d:p}))
+  );
+}
+
+/* atoms */
+function Av({name,size=34}){
+  const ini=(name||"?").split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase();
+  return <div style={{width:size,height:size,borderRadius:"50%",flexShrink:0,background:`linear-gradient(135deg,${R},${R2})`,display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",fontWeight:700,fontSize:size*.35}}>{ini}</div>;
+}
+function Pip({children,color=R}){
+  const bg=color===GN?GN2:color===AM?AM2:"#FDEAEA";
+  return <span style={{background:bg,color,fontSize:10,fontWeight:600,padding:"2px 8px",borderRadius:20,whiteSpace:"nowrap"}}>{children}</span>;
+}
+function Kpi({label,value,color=DK}){
+  return <div><div style={{fontSize:9,fontWeight:600,color:GR2,textTransform:"uppercase",letterSpacing:".08em",marginBottom:2}}>{label}</div><div style={{fontFamily:"DM Mono",fontSize:18,fontWeight:500,color,lineHeight:1}}>{value}</div></div>;
+}
+
+/* modal - slides up from bottom like native iOS */
+function Modal({title,sub,onClose,children}){
+  return <div onClick={e=>{if(e.target===e.currentTarget)onClose()}} style={{position:"fixed",inset:0,background:"rgba(0,0,0,.5)",display:"flex",alignItems:"flex-end",zIndex:9999,backdropFilter:"blur(4px)"}}>
+    <div className="pp" style={{background:WH,borderRadius:"20px 20px 0 0",width:"100%",maxWidth:540,margin:"0 auto",boxShadow:"0 -4px 30px rgba(0,0,0,.2)",overflow:"hidden",paddingBottom:"env(safe-area-inset-bottom)"}}>
+      <div style={{width:36,height:4,borderRadius:2,background:BD,margin:"12px auto 0"}}/>
+      <div style={{padding:"14px 20px 12px",display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div><div style={{fontSize:18,fontWeight:700}}>{title}</div>{sub&&<div style={{fontSize:12,color:GR2,marginTop:2}}>{sub}</div>}</div>
+        <button onClick={onClose} style={{background:"none",border:"none",color:GR2,width:28,height:28,display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><Ic n="x" sz={18}/></button>
+      </div>
+      <div style={{padding:"0 20px 20px"}}>{children}</div>
+    </div>
+  </div>;
+}
+
+const IBASE={width:"100%",border:`1.5px solid ${BD}`,borderRadius:10,padding:"12px 13px",fontSize:15,background:BG,color:DK,outline:"none",WebkitAppearance:"none",appearance:"none"};
+function Inp({label,...p}){
+  const [f,sf]=useState(false);
+  return <div style={{marginBottom:14}}>
+    {label&&<div style={{fontSize:10,fontWeight:600,color:GR2,marginBottom:5,textTransform:"uppercase",letterSpacing:".07em"}}>{label}</div>}
+    <input {...p} style={{...IBASE,borderColor:f?R:BD,...p.style}} onFocus={()=>sf(true)} onBlur={()=>sf(false)}/>
+  </div>;
+}
+function Sel({label,children,...p}){
+  return <div style={{marginBottom:14}}>
+    {label&&<div style={{fontSize:10,fontWeight:600,color:GR2,marginBottom:5,textTransform:"uppercase",letterSpacing:".07em"}}>{label}</div>}
+    <select {...p} style={{...IBASE,paddingRight:34,backgroundImage:`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23A1A1AA' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,backgroundRepeat:"no-repeat",backgroundPosition:"right 12px center"}}>{children}</select>
+  </div>;
+}
+function PB({children,col=R,onClick,style={}}){
+  return <button className="rp" onClick={onClick} style={{background:`linear-gradient(135deg,${col},${col===R?R2:col})`,color:"#fff",border:"none",borderRadius:10,padding:"12px 18px",fontSize:14,fontWeight:600,boxShadow:`0 3px 12px ${col}30`,display:"flex",alignItems:"center",gap:6,...style}}>{children}</button>;
+}
+function GB({children,onClick,style={}}){
+  return <button className="rp" onClick={onClick} style={{background:"transparent",color:GR,border:`1.5px solid ${BD}`,borderRadius:10,padding:"11px 16px",fontSize:14,fontWeight:500,...style}}>{children}</button>;
+}
+
+/* seed */
+const SE=[{id:1,name:"Carlos M.",role:"Painter",rate:200},{id:2,name:"Luis R.",role:"Carpenter",rate:220}];
+const SJ=["Ossining Deck Job","White Plains Interior"];
+const NAV=[{k:"week",i:"clp",l:"Week"},{k:"cal",i:"cal",l:"Calendar"},{k:"crew",i:"usr",l:"Crew"},{k:"jobs",i:"bld",l:"Jobs"}];
+
+/* ── APP ── */
+function App(){
+  // localStorage persistence — data survives app restarts
+  function lsGet(key, fallback) {
+    try { const v=localStorage.getItem(key); return v?JSON.parse(v):fallback; } catch{ return fallback; }
+  }
+  function lsSet(key,val){ try{localStorage.setItem(key,JSON.stringify(val));}catch{} }
+
+  const [emps,setEmpsRaw]=useState(()=>lsGet("lz_emps",SE));
+  const [jobs,setJobsRaw]=useState(()=>lsGet("lz_jobs",SJ));
+  const [logs,setLogsRaw]=useState(()=>lsGet("lz_logs",[]));
+  const [advs,setAdvsRaw]=useState(()=>lsGet("lz_advs",[]));
+
+  function setEmps(fn){ setEmpsRaw(p=>{const v=typeof fn==="function"?fn(p):fn;lsSet("lz_emps",v);return v;}); }
+  function setJobs(fn){ setJobsRaw(p=>{const v=typeof fn==="function"?fn(p):fn;lsSet("lz_jobs",v);return v;}); }
+  function setLogs(fn){ setLogsRaw(p=>{const v=typeof fn==="function"?fn(p):fn;lsSet("lz_logs",v);return v;}); }
+  function setAdvs(fn){ setAdvsRaw(p=>{const v=typeof fn==="function"?fn(p):fn;lsSet("lz_advs",v);return v;}); }
+  const [tab,setTab]=useState("week");
+  const [modal,setModal]=useState(null);
+  const [wkOff,setWkOff]=useState(0);
+  const [aJob,setAJob]=useState(SJ[0]);
+  const now=new Date();
+  const [calY,setCalY]=useState(now.getFullYear());
+  const [calM,setCalM]=useState(now.getMonth());
+  const [calSel,setCalSel]=useState(null);
+  const [fEmp,setFEmp]=useState({name:"",role:"",rate:""});
+  const [fEdit,setFEdit]=useState(null);
+  const [fJob,setFJob]=useState("");
+  const [fAdv,setFAdv]=useState({empId:"",amount:"",date:todayISO(),note:""});
+
+  const TODAY=todayISO();
+  const mon=weekMon(wkOff);
+  const wkDays=Array.from({length:7},(_,i)=>addDays(mon,i));
+  const sun=wkDays[6];
+
+  const wkLogs=logs.filter(l=>{const d=parseISO(l.date);return d>=mon&&d<=sun});
+  const getLog=(eid,iso)=>wkLogs.find(l=>l.empId===eid&&l.date===iso&&l.job===aJob);
+  const isOn=(eid,iso)=>!!getLog(eid,iso);
+
+  // Cycle: empty → full day (1) → half day (0.5) → empty
+  function toggle(eid,iso){
+    const existing=getLog(eid,iso);
+    if(!existing){
+      // empty → full day
+      setLogs(p=>[...p,{id:Date.now(),empId:eid,date:iso,job:aJob,paid:false,days:1}]);
+    } else if(existing.days===1){
+      // full → half
+      setLogs(p=>p.map(l=>l.id===existing.id?{...l,days:0.5}:l));
+    } else {
+      // half → empty
+      setLogs(p=>p.filter(l=>l.id!==existing.id));
+    }
+  }
+
+  const rt=id=>emps.find(e=>e.id===id)?.rate??0;
+  const wPay=id=>wkLogs.filter(l=>l.empId===id).reduce((s,l)=>s+(l.days||1)*rt(id),0);
+  const wOwe=id=>wkLogs.filter(l=>l.empId===id&&!l.paid).reduce((s,l)=>s+(l.days||1)*rt(id),0);
+  const advBal=id=>advs.filter(a=>a.empId===id&&!a.settled).reduce((s,a)=>s+Number(a.amount),0);
+  const netOwe=id=>Math.max(0,wOwe(id)-advBal(id));
+
+  function markPaid(eid){
+    const ids=wkLogs.filter(l=>l.empId===eid&&!l.paid).map(l=>l.id);
+    if(!ids.length)return;
+    let rem=wOwe(eid);const ts=[];
+    for(const a of advs.filter(x=>x.empId===eid&&!x.settled)){if(rem<=0)break;const amt=Number(a.amount);if(amt<=rem){ts.push(a.id);rem-=amt;}}
+    setLogs(p=>p.map(l=>ids.includes(l.id)?{...l,paid:true}:l));
+    setAdvs(p=>p.map(a=>ts.includes(a.id)?{...a,settled:true}:a));
+  }
+  function markAll(){emps.forEach(e=>markPaid(e.id))}
+
+  const wkTot=wkLogs.reduce((s,l)=>s+(l.days||1)*rt(l.empId),0);
+  const wkOwd=wkLogs.filter(l=>!l.paid).reduce((s,l)=>s+(l.days||1)*rt(l.empId),0);
+
+  function addEmp(){if(!fEmp.name.trim()||!fEmp.rate)return;setEmps(p=>[...p,{id:Date.now(),name:fEmp.name.trim(),role:fEmp.role.trim(),rate:+fEmp.rate}]);setFEmp({name:"",role:"",rate:""});setModal(null)}
+  function saveEmp(){setEmps(p=>p.map(e=>e.id===fEdit.id?{...fEdit,rate:+fEdit.rate}:e));setModal(null);setFEdit(null)}
+  function delEmp(id){if(!confirm("Remove employee?"))return;setEmps(p=>p.filter(e=>e.id!==id));setLogs(p=>p.filter(l=>l.empId!==id));setAdvs(p=>p.filter(a=>a.empId!==id))}
+  function addJob(){const t=fJob.trim();if(!t||jobs.includes(t))return;setJobs(p=>[...p,t]);setAJob(t);setFJob("");setModal(null)}
+  function delJob(n){if(!confirm(`Remove "${n}"?`))return;setJobs(p=>p.filter(j=>j!==n));setLogs(p=>p.filter(l=>l.job!==n));if(aJob===n)setAJob(jobs.find(j=>j!==n)||"")}
+  function addAdv(){const amt=+fAdv.amount;if(!fAdv.empId||!amt||amt<=0)return;setAdvs(p=>[...p,{id:Date.now(),empId:+fAdv.empId,amount:amt,date:fAdv.date,note:fAdv.note,settled:false}]);setFAdv({empId:"",amount:"",date:todayISO(),note:""});setModal(null)}
+
+  function empSt(emp){const el=logs.filter(l=>l.empId===emp.id),e=el.reduce((s,l)=>s+(l.days||1)*emp.rate,0),p=el.filter(l=>l.paid).reduce((s,l)=>s+(l.days||1)*emp.rate,0);return{days:el.reduce((s,l)=>s+(l.days||1),0),earned:e,paid:p,owed:e-p,adv:advBal(emp.id)}}
+  const jobSt=jobs.map(j=>{const jl=logs.filter(l=>l.job===j),c=jl.reduce((s,l)=>s+(l.days||1)*rt(l.empId),0),p=jl.filter(l=>l.paid).reduce((s,l)=>s+(l.days||1)*rt(l.empId),0);return{name:j,days:jl.reduce((s,l)=>s+(l.days||1),0),cost:c,paid:p,owed:c-p}});
+  const calDim=(y,m)=>new Date(y,m+1,0).getDate();
+  const calFd=(y,m)=>new Date(y,m,1).getDay();
+  const calLogs=iso=>logs.filter(l=>l.date===iso);
+  const isoDay=d=>`${calY}-${pad(calM+1)}-${pad(d)}`;
+  function buildCal(){const dim=calDim(calY,calM),fd=calFd(calY,calM),c=[];for(let i=0;i<fd;i++)c.push(null);for(let d=1;d<=dim;d++)c.push(d);while(c.length%7!==0)c.push(null);return c}
+  function mthStats(){const dim=calDim(calY,calM),ml=[];for(let d=1;d<=dim;d++)ml.push(...calLogs(isoDay(d)));const tot=ml.reduce((s,l)=>s+(l.days||1)*rt(l.empId),0),paid=ml.filter(l=>l.paid).reduce((s,l)=>s+(l.days||1)*rt(l.empId),0);return{tot,paid,owed:tot-paid,days:ml.reduce((s,l)=>s+(l.days||1),0)}}
+
+  const GRDCOLS="138px repeat(7,minmax(42px,1fr)) 100px";
+  const PAD="14px 14px 90px";
+
+  return <>
+    {/* TOP HEADER */}
+    <div style={{background:DK,paddingTop:"env(safe-area-inset-top)",position:"fixed",top:0,left:0,right:0,zIndex:100}}>
+      <div style={{display:"flex",alignItems:"center",gap:10,padding:"10px 14px"}}>
+        <img src={LOGO} alt="LUCAZ" style={{height:30,width:"auto"}}/>
+        <div style={{flex:1}}>
+          <div style={{fontSize:12,fontWeight:700,color:"#fff",lineHeight:1}}>LUCAZ LLC</div>
+          <div style={{fontSize:9,color:"rgba(255,255,255,.35)",textTransform:"uppercase",letterSpacing:".1em"}}>Crew Tracker</div>
+        </div>
+        <button className="tg" onClick={()=>setModal("addEmp")} style={{background:R,border:"none",borderRadius:8,width:32,height:32,display:"flex",alignItems:"center",justifyContent:"center"}}><Ic n="usr" sz={15} c="#fff"/></button>
+        <button className="tg" onClick={()=>setModal("addJob")} style={{background:DK2,border:`1px solid ${DK3}`,borderRadius:8,width:32,height:32,display:"flex",alignItems:"center",justifyContent:"center"}}><Ic n="pls" sz={15} c="rgba(255,255,255,.6)"/></button>
+      </div>
+    </div>
+
+    {/* SCROLL AREA */}
+    <div style={{overflowY:"auto",WebkitOverflowScrolling:"touch",background:BG,paddingTop:"calc(env(safe-area-inset-top) + 52px)",height:"100vh"}}>
+
+      {/* ═══ WEEK ══════════════════════════════════════════════════ */}
+      {tab==="week" && <div className="fi" style={{padding:PAD}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:14,gap:8}}>
+          <div>
+            <div style={{fontSize:9,fontWeight:600,color:GR2,textTransform:"uppercase",letterSpacing:".1em",marginBottom:3}}>Timesheet</div>
+            <h1 style={{fontSize:17,fontWeight:800,lineHeight:1.1}}>{fmtWk(mon)}</h1>
+          </div>
+          <div style={{display:"flex",gap:5}}>
+            {wkOff!==0&&<button className="rp" onClick={()=>setWkOff(0)} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,padding:"0 10px",height:30,fontSize:11,fontWeight:600,color:R}}>Today</button>}
+            <button className="rp" onClick={()=>setWkOff(w=>w-1)} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",color:GR}}><Ic n="chL" sz={13}/></button>
+            <button className="rp" onClick={()=>setWkOff(w=>w+1)} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",color:GR}}><Ic n="chR" sz={13}/></button>
+          </div>
+        </div>
+
+        {/* Job selector */}
+        <div style={{background:WH,borderRadius:11,border:`1px solid ${BD}`,padding:"9px 12px",marginBottom:12,display:"flex",alignItems:"center",gap:7,flexWrap:"wrap"}}>
+          <span style={{fontSize:9,fontWeight:700,color:GR2,textTransform:"uppercase",letterSpacing:".1em",whiteSpace:"nowrap"}}>Job</span>
+          {jobs.map(j=><button key={j} className="rp" onClick={()=>setAJob(j)} style={{border:"none",borderRadius:7,padding:"5px 12px",fontSize:11,fontWeight:600,background:aJob===j?R:BG,color:aJob===j?"#fff":GR,boxShadow:aJob===j?`0 2px 8px ${RG}`:"none"}}>{j}</button>)}
+          <button className="rp" onClick={()=>setModal("addJob")} style={{background:"none",border:`1.5px dashed ${BD}`,borderRadius:7,padding:"4px 10px",fontSize:10,color:GR2,display:"flex",alignItems:"center",gap:3}}><Ic n="pls" sz={10} c={GR2}/>New</button>
+        </div>
+
+        {/* Grid */}
+        {emps.length===0
+          ? <div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,padding:40,textAlign:"center"}}><div style={{fontSize:16,fontWeight:700,marginBottom:10}}>No crew yet</div><PB onClick={()=>setModal("addEmp")}>Add First Employee</PB></div>
+          : <>
+            <div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,overflow:"auto",WebkitOverflowScrolling:"touch",marginBottom:12}}>
+              <div style={{minWidth:540}}>
+                {/* Header */}
+                <div style={{display:"grid",gridTemplateColumns:GRDCOLS,background:BG2,borderBottom:`1px solid ${BD}`}}>
+                  <div style={{padding:"8px 12px",fontSize:9,fontWeight:700,color:GR2,textTransform:"uppercase",letterSpacing:".06em"}}>Employee</div>
+                  {wkDays.map((d,i)=>{const iso=toISO(d),isT=iso===TODAY;return(
+                    <div key={i} style={{padding:"7px 2px",textAlign:"center",borderLeft:`1px solid ${BD}`}}>
+                      <div style={{fontSize:8,fontWeight:700,textTransform:"uppercase",color:isT?R:GR2}}>{WDAYS[i]}</div>
+                      <div style={{fontSize:15,fontWeight:isT?800:400,color:isT?R:DK,marginTop:1}}>{d.getDate()}</div>
+                      {isT&&<div style={{width:4,height:4,borderRadius:"50%",background:R,margin:"2px auto 0"}}/>}
+                    </div>
+                  )})}
+                  <div style={{padding:"8px 10px",fontSize:9,fontWeight:700,color:GR2,textTransform:"uppercase",textAlign:"right",borderLeft:`1px solid ${BD}`}}>Pay</div>
+                </div>
+
+                {/* Rows */}
+                {emps.map((emp,ei)=>{
+                  const wp=wPay(emp.id),wo=wOwe(emp.id),ab=advBal(emp.id),days=wkLogs.filter(l=>l.empId===emp.id).reduce((s,l)=>s+(l.days||1),0);
+                  return <div key={emp.id} style={{display:"grid",gridTemplateColumns:GRDCOLS,borderBottom:ei<emps.length-1?`1px solid ${BD}`:"none",alignItems:"center"}}>
+                    <div style={{padding:"10px 12px"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:8}}>
+                        <Av name={emp.name} size={30}/>
+                        <div style={{minWidth:0}}>
+                          <div style={{fontWeight:600,fontSize:12,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{emp.name}</div>
+                          <div style={{fontSize:9,color:GR2,fontFamily:"DM Mono"}}>{f$(emp.rate)}/day</div>
+                          {ab>0&&<div style={{fontSize:8,color:AM,fontWeight:600}}>Adv {f$(ab)}</div>}
+                        </div>
+                      </div>
+                    </div>
+                    {wkDays.map((d,di)=>{
+                      const iso=toISO(d),log=getLog(emp.id,iso),on=!!log,isHalf=log?.days===0.5,isT=iso===TODAY;
+                      return <div key={di} style={{display:"flex",justifyContent:"center",alignItems:"center",padding:"8px 2px",borderLeft:`1px solid ${BD}`}}>
+                        <div className={`dt${isHalf?" half":on?" on":""}${isT&&!on?" td":""}`} onClick={()=>toggle(emp.id,iso)} title={isHalf?"½ day — tap to clear":on?"Full day — tap for ½":"Tap to log full day"}>
+                          {on&&!isHalf&&<Ic n="chk" sz={14} c="#fff" sw={2.5}/>}
+                          {isHalf&&<span style={{fontSize:13,fontWeight:800,color:"#fff",lineHeight:1}}>½</span>}
+                          {log?.paid&&<div style={{position:"absolute",top:-3,right:-3,width:9,height:9,borderRadius:"50%",background:GNB,border:"2px solid #fff"}}/>}
+                        </div>
+                      </div>;
+                    })}
+                    <div style={{padding:"10px 10px 10px 4px",textAlign:"right",borderLeft:`1px solid ${BD}`}}>
+                      <div style={{fontWeight:700,fontSize:13,fontFamily:"DM Mono",color:days>0?R:BD}}>{f$(wp)}</div>
+                      <div style={{fontSize:9,color:GR2,marginTop:1}}>{days%1===0?days:days.toFixed(1)}d</div>
+                      {wo>0&&<button className="rp" onClick={()=>markPaid(emp.id)} style={{marginTop:4,background:GN2,border:`1px solid ${GNB}40`,borderRadius:6,padding:"3px 6px",fontSize:9,color:GN,fontWeight:700,display:"block",width:"100%"}}>Pay {f$(netOwe(emp.id))}</button>}
+                      {wo===0&&days>0&&<div style={{marginTop:3}}><Pip color={GN}>✓ Paid</Pip></div>}
+                    </div>
+                  </div>;
+                })}
+
+                {/* Totals */}
+                <div style={{display:"grid",gridTemplateColumns:GRDCOLS,background:BG2,borderTop:`2px solid ${BD}`}}>
+                  <div style={{padding:"9px 12px",fontSize:9,fontWeight:700,color:GR,textTransform:"uppercase",letterSpacing:".06em"}}>Totals</div>
+                  {wkDays.map((d,i)=>{const iso=toISO(d),dt=wkLogs.filter(l=>l.date===iso).reduce((s,l)=>s+rt(l.empId),0);return <div key={i} style={{padding:"9px 2px",textAlign:"center",fontSize:10,fontWeight:600,color:dt>0?DK:BD,borderLeft:`1px solid ${BD}`,fontFamily:"DM Mono"}}>{dt>0?f$(dt):"—"}</div>})}
+                  <div style={{padding:"9px 10px 9px 4px",textAlign:"right",borderLeft:`1px solid ${BD}`}}>
+                    <div style={{fontSize:15,fontWeight:700,color:R,fontFamily:"DM Mono"}}>{f$(wkTot)}</div>
+                    {wkOwd>0&&<div style={{fontSize:9,color:AM}}>Owed {f$(wkOwd)}</div>}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {wkLogs.length>0&&<div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,padding:"14px 16px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:10}}>
+              <div style={{display:"flex",gap:18,flexWrap:"wrap"}}>
+                <Kpi label="Week Total" value={f$(wkTot)}/>
+                <Kpi label="Outstanding" value={f$(wkOwd)} color={wkOwd>0?R:GN}/>
+                <Kpi label="Days" value={wkLogs.reduce((s,l)=>s+(l.days||1),0)}/>
+              </div>
+              <div style={{display:"flex",gap:7,flexWrap:"wrap"}}>
+                {wkOwd>0&&<PB col={GN} onClick={markAll} style={{background:`linear-gradient(135deg,${GN},${GN})`,padding:"10px 14px",fontSize:13}}><Ic n="chk" sz={13} c="#fff"/>Mark All Paid</PB>}
+                <PB col={AM} onClick={()=>setModal("addAdv")} style={{background:`linear-gradient(135deg,${AM},#B45309)`,padding:"10px 14px",fontSize:13}}><Ic n="dlr" sz={13} c="#fff"/>Advance</PB>
+              </div>
+            </div>}
+          </>
+        }
+      </div>}
+
+      {/* ═══ CALENDAR ══════════════════════════════════════════════ */}
+      {tab==="cal"&&<div className="fi" style={{padding:PAD}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,gap:8}}>
+          <div>
+            <div style={{fontSize:9,fontWeight:600,color:GR2,textTransform:"uppercase",letterSpacing:".1em",marginBottom:3}}>Calendar</div>
+            <h1 style={{fontSize:17,fontWeight:800}}>{MFULL[calM]} {calY}</h1>
+          </div>
+          <div style={{display:"flex",gap:5}}>
+            <button className="rp" onClick={()=>{if(calM===0){setCalM(11);setCalY(y=>y-1)}else setCalM(m=>m-1)}} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",color:GR}}><Ic n="chL" sz={13}/></button>
+            <button className="rp" onClick={()=>{const t=new Date();setCalM(t.getMonth());setCalY(t.getFullYear());setCalSel(null)}} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,padding:"0 10px",height:30,fontSize:11,fontWeight:600,color:R}}>Today</button>
+            <button className="rp" onClick={()=>{if(calM===11){setCalM(0);setCalY(y=>y+1)}else setCalM(m=>m+1)}} style={{background:WH,border:`1.5px solid ${BD}`,borderRadius:8,width:30,height:30,display:"flex",alignItems:"center",justifyContent:"center",color:GR}}><Ic n="chR" sz={13}/></button>
+          </div>
+        </div>
+
+        {/* Month stats */}
+        {(()=>{const ms=mthStats();return <div style={{background:WH,borderRadius:11,border:`1px solid ${BD}`,padding:"10px 14px",marginBottom:12,display:"flex",gap:16,flexWrap:"wrap"}}>
+          {[{l:"Days",v:ms.days},{l:"Total",v:f$(ms.tot)},{l:"Paid",v:f$(ms.paid),c:GN},{l:"Owed",v:f$(ms.owed),c:ms.owed>0?R:GN}].map(s=><div key={s.l}><div style={{fontSize:9,color:GR2,textTransform:"uppercase",letterSpacing:".07em",fontWeight:600}}>{s.l}</div><div style={{fontFamily:"DM Mono",fontWeight:600,fontSize:14,color:s.c||DK,marginTop:1}}>{s.v}</div></div>)}
+        </div>})()}
+
+        {/* Full width calendar */}
+        <div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,overflow:"hidden",marginBottom:12}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",background:BG2,borderBottom:`1px solid ${BD}`}}>
+            {CDAYS.map((d,i)=><div key={i} style={{padding:"9px 2px",textAlign:"center",fontSize:10,fontWeight:700,color:GR2,textTransform:"uppercase"}}>{d}</div>)}
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)"}}>
+            {buildCal().map((day,idx)=>{
+              if(day===null)return <div key={`b${idx}`} className="cb" style={{minHeight:76,background:BG2,borderRight:`1px solid ${BD}`,borderBottom:`1px solid ${BD}`}}/>;
+              const iso=isoDay(day),dl=calLogs(iso),isT=iso===TODAY,isSel=iso===calSel;
+              const allPaid=dl.length>0&&dl.every(l=>l.paid),hasOwed=dl.some(l=>!l.paid);
+              return <div key={day} className="cc" onClick={()=>setCalSel(iso===calSel?null:iso)} style={{minHeight:76,padding:"6px 7px",position:"relative",borderRight:`1px solid ${BD}`,borderBottom:`1px solid ${BD}`,background:isSel?"#FFF0F0":isT?"#FFFBF0":WH,boxShadow:isSel?`inset 0 0 0 2px ${R}`:isT?`inset 0 0 0 2px ${AMB}`:"none"}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+                  <div style={{width:21,height:21,borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:isT?800:500,background:isT?R:"transparent",color:isT?"#fff":isSel?R:DK}}>{day}</div>
+                  {allPaid&&<div style={{width:6,height:6,borderRadius:"50%",background:GNB}}/>}
+                  {hasOwed&&<div style={{width:6,height:6,borderRadius:"50%",background:R,opacity:.55}}/>}
+                </div>
+                <div style={{display:"flex",flexDirection:"column",gap:2}}>
+                  {dl.slice(0,2).map(l=>{const e=emps.find(x=>x.id===l.empId);return e?<div key={l.id} style={{fontSize:8,fontWeight:600,padding:"1px 4px",borderRadius:3,background:l.paid?GN2:"#FDEAEA",color:l.paid?GN:R,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{e.name.split(" ")[0]}</div>:null})}
+                  {dl.length>2&&<div style={{fontSize:7,color:GR2}}>+{dl.length-2}</div>}
+                </div>
+              </div>;
+            })}
+          </div>
+        </div>
+
+        {/* Day detail below */}
+        {calSel
+          ?<div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,overflow:"hidden"}}>
+            <div style={{padding:"12px 16px",background:`linear-gradient(135deg,${R},${R2})`,display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+              <div>
+                <div style={{fontSize:15,fontWeight:700,color:"#fff"}}>{fD(calSel)}</div>
+                {(()=>{const dl=calLogs(calSel),tot=dl.reduce((s,l)=>s+(l.days||1)*rt(l.empId),0);return <div style={{fontSize:11,color:"rgba(255,255,255,.65)",marginTop:1}}>{dl.length} worker{dl.length!==1?"s":""} · {f$(tot)}</div>})()}
+              </div>
+              <button className="rp" onClick={()=>setCalSel(null)} style={{background:"rgba(255,255,255,.15)",border:"none",borderRadius:7,width:28,height:28,display:"flex",alignItems:"center",justifyContent:"center"}}><Ic n="x" sz={13} c="#fff"/></button>
+            </div>
+            {calLogs(calSel).length===0
+              ?<div style={{padding:24,textAlign:"center",color:GR2,fontSize:13}}>No work logged this day.</div>
+              :<div style={{padding:12,display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(160px,1fr))",gap:9}}>
+                {calLogs(calSel).map(l=>{const e=emps.find(x=>x.id===l.empId);return <div key={l.id} style={{background:BG,borderRadius:9,border:`1px solid ${BD}`,padding:"10px 12px",display:"flex",alignItems:"center",gap:10}}>
+                  <Av name={e?.name||"?"} size={32}/>
+                  <div style={{flex:1,minWidth:0}}>
+                    <div style={{fontWeight:600,fontSize:13}}>{e?.name||"?"}</div>
+                    <div style={{fontSize:10,color:GR2,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{l.job}</div>
+                    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginTop:4}}>
+                      <div style={{fontFamily:"DM Mono",fontWeight:600,fontSize:12,color:R}}>{e?f$(e.rate):"—"}</div>
+                      <Pip color={l.paid?GN:R}>{l.paid?"Paid":"Owed"}</Pip>
+                    </div>
+                  </div>
+                </div>})}
+              </div>
+            }
+          </div>
+          :<div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,padding:"16px",display:"flex",alignItems:"center",gap:12}}>
+            <div style={{width:36,height:36,borderRadius:9,background:BG,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}><Ic n="inf" sz={18} c={GR2}/></div>
+            <div style={{fontSize:12,color:GR2,lineHeight:1.6}}>Tap any date · <span style={{color:GN,fontWeight:600}}>Green</span> = paid · <span style={{color:R,fontWeight:600}}>Red</span> = owed</div>
+          </div>
+        }
+      </div>}
+
+      {/* ═══ CREW ══════════════════════════════════════════════════ */}
+      {tab==="crew"&&<div className="fi" style={{padding:PAD}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}>
+          <h1 style={{fontSize:18,fontWeight:800}}>Crew Members</h1>
+          <PB onClick={()=>setModal("addEmp")} style={{padding:"9px 14px",fontSize:13}}><Ic n="pls" sz={13} c="#fff"/>Add</PB>
+        </div>
+        <div style={{display:"flex",flexDirection:"column",gap:10}}>
+          {emps.map(emp=>{
+            const st=empSt(emp),ea=advs.filter(a=>a.empId===emp.id);
+            return <div key={emp.id} style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,overflow:"hidden"}}>
+              <div style={{display:"flex",alignItems:"center",padding:"14px 16px",gap:12,flexWrap:"wrap"}}>
+                <Av name={emp.name} size={42}/>
+                <div style={{flex:1,minWidth:110}}>
+                  <div style={{fontWeight:700,fontSize:15}}>{emp.name}</div>
+                  <div style={{fontSize:11,color:GR2}}>{emp.role||"Employee"} · <span style={{fontFamily:"DM Mono"}}>{f$(emp.rate)}/day</span></div>
+                </div>
+                <div style={{display:"flex",gap:14,flexWrap:"wrap"}}>
+                  {[{l:"Days",v:st.days},{l:"Earned",v:f$(st.earned)},{l:"Paid",v:f$(st.paid),c:GN},{l:"Owed",v:f$(st.owed),c:st.owed>0?R:GN},...(st.adv>0?[{l:"Adv",v:f$(st.adv),c:AM}]:[])].map(s=><div key={s.l}><div style={{fontSize:8,fontWeight:600,color:GR2,textTransform:"uppercase",letterSpacing:".07em",marginBottom:1}}>{s.l}</div><div style={{fontFamily:"DM Mono",fontSize:13,fontWeight:500,color:s.c||DK}}>{s.v}</div></div>)}
+                </div>
+                <div style={{display:"flex",gap:6}}>
+                  <GB onClick={()=>{setFEdit({...emp});setModal("editEmp")}} style={{padding:"6px 12px",fontSize:12}}>Edit</GB>
+                  <button className="rp" onClick={()=>delEmp(emp.id)} style={{background:"none",border:`1.5px solid #EECECE`,borderRadius:9,padding:"6px 9px",color:"#B03030",display:"flex",alignItems:"center"}}><Ic n="x" sz={13} c="#B03030"/></button>
+                </div>
+              </div>
+              {ea.length>0&&<div style={{borderTop:`1px solid ${BD}`,padding:"8px 16px",background:BG}}>
+                <div style={{fontSize:8,fontWeight:700,color:GR2,textTransform:"uppercase",letterSpacing:".08em",marginBottom:5}}>Advances</div>
+                {ea.map(a=><div key={a.id} style={{display:"flex",alignItems:"center",gap:8,fontSize:11,marginBottom:4}}>
+                  <div style={{flex:1,color:GR}}>{fD(a.date)}{a.note?` · ${a.note}`:""}</div>
+                  <div style={{fontFamily:"DM Mono",fontWeight:500,color:AM}}>{f$(a.amount)}</div>
+                  {a.settled?<Pip color={GN}>Settled</Pip>:<button className="rp" onClick={()=>setAdvs(p=>p.map(x=>x.id===a.id?{...x,settled:true}:x))} style={{background:"none",border:`1px solid ${GNB}`,borderRadius:5,padding:"2px 7px",fontSize:9,color:GN,fontWeight:700}}>Settle</button>}
+                </div>)}
+              </div>}
+            </div>;
+          })}
+          {emps.length===0&&<div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,padding:36,textAlign:"center",color:GR2}}>No employees yet.</div>}
+        </div>
+      </div>}
+
+      {/* ═══ JOBS ══════════════════════════════════════════════════ */}
+      {tab==="jobs"&&<div className="fi" style={{padding:PAD}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}>
+          <h1 style={{fontSize:18,fontWeight:800}}>Jobs & Projects</h1>
+          <PB onClick={()=>setModal("addJob")} style={{padding:"9px 14px",fontSize:13}}><Ic n="pls" sz={13} c="#fff"/>New</PB>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(210px,1fr))",gap:11}}>
+          {jobSt.map(job=><div key={job.name} style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,overflow:"hidden"}}>
+            <div style={{background:`linear-gradient(135deg,${R},${R2})`,padding:"14px 16px"}}>
+              <div style={{fontSize:14,fontWeight:700,color:"#fff"}}>{job.name}</div>
+              <div style={{fontSize:10,color:"rgba(255,255,255,.65)",marginTop:1}}>{job.days} day{job.days!==1?"s":""}</div>
+            </div>
+            <div style={{padding:"12px 16px"}}>
+              {[{l:"Total",v:f$(job.cost)},{l:"Paid",v:f$(job.paid),c:GN},{l:"Owed",v:f$(job.owed),c:job.owed>0?R:GN}].map(s=><div key={s.l} style={{display:"flex",justifyContent:"space-between",marginBottom:6}}><span style={{fontSize:12,color:GR2}}>{s.l}</span><span style={{fontWeight:700,fontSize:12,fontFamily:"DM Mono",color:s.c||DK}}>{s.v}</span></div>)}
+              <div style={{height:1,background:BD,margin:"6px 0 8px"}}/>
+              {emps.map(emp=>{const ed=logs.filter(l=>l.empId===emp.id&&l.job===job.name).length;if(!ed)return null;return <div key={emp.id} style={{display:"flex",justifyContent:"space-between",marginBottom:4,alignItems:"center"}}><span style={{fontSize:10,color:GR,display:"flex",alignItems:"center",gap:4}}><Av name={emp.name} size={13}/>{emp.name}</span><span style={{fontSize:10,fontFamily:"DM Mono",fontWeight:500}}>{ed}d · {f$(ed*emp.rate)}</span></div>})}
+              <button className="rp" onClick={()=>delJob(job.name)} style={{marginTop:6,background:"none",border:"none",color:"#C03030",fontSize:10,padding:0,display:"flex",alignItems:"center",gap:2}}><Ic n="x" sz={10} c="#C03030"/>Remove</button>
+            </div>
+          </div>)}
+          {jobs.length===0&&<div style={{background:WH,borderRadius:13,border:`1px solid ${BD}`,padding:30,textAlign:"center",color:GR2,gridColumn:"1/-1"}}>No jobs yet.</div>}
+        </div>
+      </div>}
+
+    </div>{/* end scroll */}
+
+    {/* BOTTOM TAB BAR */}
+    <div style={{position:"fixed",bottom:0,left:0,right:0,background:DK,borderTop:`1px solid ${DK3}`,display:"flex",paddingBottom:"env(safe-area-inset-bottom)",zIndex:100}}>
+      {NAV.map(n=><button key={n.k} className="rp" onClick={()=>setTab(n.k)} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:3,padding:"10px 4px 8px",border:"none",background:"transparent",color:tab===n.k?"#fff":"rgba(255,255,255,.38)"}}>
+        <Ic n={n.i} sz={21} c={tab===n.k?"#fff":"rgba(255,255,255,.38)"}/>
+        <span style={{fontSize:9,fontWeight:tab===n.k?700:400,letterSpacing:".02em"}}>{n.l}</span>
+        {tab===n.k&&<div style={{width:4,height:4,borderRadius:"50%",background:R,marginTop:1}}/>}
+      </button>)}
+      <button className="rp" onClick={()=>setModal("addAdv")} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:3,padding:"10px 4px 8px",border:"none",background:"transparent",color:"rgba(255,255,255,.38)"}}>
+        <Ic n="dlr" sz={21} c="rgba(255,255,255,.38)"/>
+        <span style={{fontSize:9,fontWeight:400,letterSpacing:".02em"}}>Advance</span>
+      </button>
+    </div>
+
+    {/* MODALS */}
+    {modal==="addEmp"&&<Modal title="Add Crew Member" onClose={()=>setModal(null)}>
+      <Inp label="Full Name" placeholder="e.g. Carlos M." value={fEmp.name} onChange={e=>setFEmp(p=>({...p,name:e.target.value}))} autoCapitalize="words"/>
+      <Inp label="Role / Trade" placeholder="e.g. Painter, Carpenter" value={fEmp.role} onChange={e=>setFEmp(p=>({...p,role:e.target.value}))} autoCapitalize="words"/>
+      <Inp label="Daily Rate ($)" type="number" inputMode="decimal" placeholder="200" value={fEmp.rate} onChange={e=>setFEmp(p=>({...p,rate:e.target.value}))}/>
+      <div style={{display:"flex",gap:9,justifyContent:"flex-end",marginTop:4}}><GB onClick={()=>setModal(null)}>Cancel</GB><PB onClick={addEmp}>Add to Crew</PB></div>
+    </Modal>}
+
+    {modal==="editEmp"&&fEdit&&<Modal title="Edit Employee" onClose={()=>setModal(null)}>
+      <Inp label="Full Name" value={fEdit.name} onChange={e=>setFEdit(p=>({...p,name:e.target.value}))} autoCapitalize="words"/>
+      <Inp label="Role / Trade" value={fEdit.role} onChange={e=>setFEdit(p=>({...p,role:e.target.value}))} autoCapitalize="words"/>
+      <Inp label="Daily Rate ($)" type="number" inputMode="decimal" value={fEdit.rate} onChange={e=>setFEdit(p=>({...p,rate:e.target.value}))}/>
+      <div style={{display:"flex",gap:9,justifyContent:"flex-end",marginTop:4}}><GB onClick={()=>setModal(null)}>Cancel</GB><PB onClick={saveEmp}>Save</PB></div>
+    </Modal>}
+
+    {modal==="addJob"&&<Modal title="New Job / Project" sub="Add a job site to assign work days to" onClose={()=>setModal(null)}>
+      <Inp label="Job Name" placeholder="e.g. Bronxville Exterior" value={fJob} onChange={e=>setFJob(e.target.value)} autoCapitalize="words"/>
+      <div style={{display:"flex",gap:9,justifyContent:"flex-end",marginTop:4}}><GB onClick={()=>setModal(null)}>Cancel</GB><PB onClick={addJob}>Add Job</PB></div>
+    </Modal>}
+
+    {modal==="addAdv"&&<Modal title="Record Advance Pay" sub="Auto-deducted when marking employee paid" onClose={()=>setModal(null)}>
+      <Sel label="Employee" value={fAdv.empId} onChange={e=>setFAdv(p=>({...p,empId:e.target.value}))}>
+        <option value="">Select employee…</option>
+        {emps.map(e=><option key={e.id} value={e.id}>{e.name}</option>)}
+      </Sel>
+      <Inp label="Amount ($)" type="number" inputMode="decimal" placeholder="150" value={fAdv.amount} onChange={e=>setFAdv(p=>({...p,amount:e.target.value}))}/>
+      <Inp label="Date" type="date" value={fAdv.date} onChange={e=>setFAdv(p=>({...p,date:e.target.value}))}/>
+      <Inp label="Note (optional)" placeholder="e.g. Cash for gas" value={fAdv.note} onChange={e=>setFAdv(p=>({...p,note:e.target.value}))}/>
+      <div style={{background:AM2,borderRadius:9,padding:"9px 12px",marginBottom:12,fontSize:12,color:AM,display:"flex",gap:7,alignItems:"flex-start"}}>
+        <Ic n="inf" sz={13} c={AM}/><span>Deducted automatically when you mark this employee paid.</span>
+      </div>
+      <div style={{display:"flex",gap:9,justifyContent:"flex-end"}}><GB onClick={()=>setModal(null)}>Cancel</GB><PB col={AM} onClick={addAdv} style={{background:`linear-gradient(135deg,${AM},#B45309)`}}>Record Advance</PB></div>
+    </Modal>}
+  </>;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>
